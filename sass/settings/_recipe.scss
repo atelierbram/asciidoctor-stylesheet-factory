@@ -1,0 +1,125 @@
+@import "defaults";
+
+$blue-cool: #0df; /* hsl(188, 100%, 50%)*/
+$cyan: adjust-hue($blue-cool,-16%);    
+$green: adjust-hue($blue-cool,-32%);   
+$blue-mid: adjust-hue($blue-cool,16%); 
+$blue-warm: adjust-hue($blue-cool,32%);
+$purple: adjust-hue($blue-cool,64%);
+$violet: adjust-hue($blue-cool,80%);
+$red: complement($blue-cool);
+$grey: mix($blue-cool,$red,50%);
+
+/* $green: #0f9; */ /* hsl(156, 100%, 50%) */
+/* $cyan: #0fd; */ /* hsl(172, 100%, 50%) */
+/* $blue-cool: #0df; */ /* hsl(188, 100%, 50%)*/
+/* $blue-mid: #09f;  *//* hsl(204, 100%, 50%)*/
+/* $blue-warm: #05f; */ /* hsl(220, 100%, 50%)*/
+
+// Body
+body { 
+  font: normal 100%/1.375 "Bad Script", Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans",Verdana, sans-serif;
+  color: #111;
+}
+h2 {
+  border-bottom: 1px solid lighten($grey,15%);
+  margin-bottom: 1px; 
+}
+p {
+  padding: .5em 0 !important
+  ;
+//  margin-bottom: 0 !important;
+  // line-height: 1.375 !important; 
+} 
+
+.sect1 > .sectionbody > .listingblock:first-of-type .title:first-of-type,
+.sect1 > .sectionbody > .paragraph:first-of-type p:first-of-type {
+  border-top: 1px solid $grey; 
+  margin-top: 0;
+  padding-top: .5em;
+}
+
+$em-base: 16px;
+$body-bg: white;
+$primary-color: $blue-warm;
+$alert-color: lighten($violet,24%);
+$global-radius: 4px;
+
+// Headings
+
+$header-font-family: "Open Sans Condensed", "DejaVu Sans Condensed", Corbel, "Lucida Grande", "Lucida Sans", "Trebuchet Ms", "Ubuntu Condensed", "DejaVu Sans", sans-serif;
+$header-font-weight: normal;
+$header-font-color: darken($blue-mid,20%);
+$header-top-margin: 1em;
+$header-bottom-margin: 1px;
+$title-font-weight: $header-font-weight;
+$subheader-font-color: darken($header-font-color,4%);
+$sect-divider-size: 3px;
+$sect-divider-style: double;
+$sect-divider-color: #ebebeb;
+$sidebar-header-border-size: 0 0 1px 0 !default;
+
+// Paragraphs
+$paragraph-margin-top: 0;
+$paragraph-margin-bottom: 0;
+$paragraph-line-height: 1.375; 
+
+// Inline Code
+
+$code-font-weight: normal;
+$code-font-size: emCalc($em-base - 1px);
+$code-bg-color: darken(#fff, 5%);
+$code-border-color: lighten($grey,25%);
+$code-border-size: 1px;
+$code-padding: 1px 3px 0;
+
+// Code Blocks
+// *Recommended highlight.js themes: magula, default, docco
+
+$pre-font-family: Menlo, Consolas, "DejaVu Sans Mono", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "Ubuntu Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Courier, monospace;
+$pre-border-size: 1px;
+$pre-border-style: solid;
+$pre-border-color: lighten($grey,35%);
+$pre-bg: lighten($grey,45%);
+
+// Links
+
+$anchor-text-decoration: underline;
+
+// Lists
+
+$list-side-margin: emCalc(24px);
+$definition-list-header-margin-bottom: emCalc(5px);
+$definition-list-margin-bottom: emCalc(20px);
+
+// Blockquotes
+
+$blockquote-font-color: lighten($body-font-color, 30%);
+$blockquote-cite-font-size: inherit;
+$blockquote-cite-font-color: darken($blockquote-font-color, 10%);
+
+// Tables
+
+$table-head-font-size: inherit;
+$table-row-font-size: inherit;
+$table-line-height: 1.6;
+$table-border-highlight-color: #468847 !default;
+$table-border-highlight-size: 3px !default;
+.admonitionblock > table td.icon {
+  // background-color: lighten($green,10%); 
+  // border-right: 1px solid darken($green,5%);
+  border-right-color: transparent;
+  color: darken($green,36%);
+}
+.admonitionblock > table td.icon .title {
+  background-color: #33ffad;
+  padding: .5em 1em;
+  border-radius: .25em;
+  border: 1px solid #00cc7a;
+}
+.admonitionblock > table td.content {
+  border-left-color: transparent !important;
+}
+.admonitionblock > table td.content {
+  color: #444 !important;
+}
